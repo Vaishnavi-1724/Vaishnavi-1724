@@ -1,196 +1,745 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Vaishnavi R | B.Tech Information Technology</title>
+<title>Vaishnavi R | IT Portfolio</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #f7f8fc;
-            color: #222;
-            line-height: 1.6;
-        }
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f7ff;
+    color:#1f2937;
+    line-height:1.7;
+}
 
-        header {
-            background: linear-gradient(135deg, #111827, #4f46e5);
-            color: white;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 30px;
-        }
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:#111827;
+    padding:16px 5%;
+    display:flex;
+    justify-content:center;
+    gap:28px;
+    z-index:1000;
+}
 
-        .hero {
-            max-width: 850px;
-        }
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
 
-        .hero h1 {
-            font-size: 55px;
-            margin-bottom: 15px;
-        }
+nav a:hover{
+    color:#a5b4fc;
+}
 
-        .hero h1 span {
-            color: #a5b4fc;
-        }
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:100px 20px 60px;
+    background:linear-gradient(135deg,#111827,#3730a3,#6366f1);
+    color:white;
+}
 
-        .hero h2 {
-            font-size: 25px;
-            font-weight: normal;
-            margin-bottom: 20px;
-        }
+.hero-content{
+    max-width:900px;
+}
 
-        .hero p {
-            font-size: 18px;
-            color: #e5e7eb;
-            margin-bottom: 30px;
-        }
+.hero h1{
+    font-size:58px;
+    margin-bottom:10px;
+}
 
-        .btn {
-            display: inline-block;
-            padding: 13px 25px;
-            margin: 8px;
-            background: white;
-            color: #4f46e5;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
+.hero h1 span{
+    color:#c7d2fe;
+}
 
-        .btn:hover {
-            transform: translateY(-3px);
-            background: #e0e7ff;
-        }
+.hero h2{
+    font-size:25px;
+    font-weight:normal;
+    margin-bottom:20px;
+}
 
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(17, 24, 39, 0.95);
-            padding: 15px;
-            text-align: center;
-            z-index: 1000;
-        }
+.hero p{
+    font-size:18px;
+    color:#e5e7eb;
+    max-width:750px;
+    margin:auto;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
+.buttons{
+    margin-top:30px;
+}
 
-        nav a:hover {
-            color: #a5b4fc;
-        }
+.btn{
+    display:inline-block;
+    padding:12px 25px;
+    margin:7px;
+    background:white;
+    color:#4338ca;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
 
-        section {
-            padding: 80px 10%;
-        }
+.btn:hover{
+    transform:translateY(-4px);
+    background:#e0e7ff;
+}
 
-        .section-title {
-            text-align: center;
-            font-size: 35px;
-            margin-bottom: 40px;
-            color: #312e81;
-        }
+section{
+    padding:90px 8%;
+}
 
-        .about {
-            max-width: 900px;
-            margin: auto;
-            text-align: center;
-            font-size: 18px;
-        }
+.section-title{
+    text-align:center;
+    font-size:38px;
+    color:#312e81;
+    margin-bottom:45px;
+}
 
-        .education-card,
-        .card {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            margin: 15px 0;
-            transition: 0.3s;
-        }
+.container{
+    max-width:1100px;
+    margin:auto;
+}
 
-        .card:hover,
-        .education-card:hover {
-            transform: translateY(-5px);
-        }
+.about-box{
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    text-align:center;
+}
 
-        .skills {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 20px;
-            max-width: 900px;
-            margin: auto;
-        }
+.about-box p{
+    font-size:18px;
+}
 
-        .skill {
-            background: white;
-            padding: 25px;
-            text-align: center;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.07);
-        }
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
 
-        .contact {
-            text-align: center;
-            background: #eef2ff;
-        }
+.card{
+    background:white;
+    padding:28px;
+    border-radius:18px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
 
-        .contact a {
-            color: #4338ca;
-            text-decoration: none;
-            font-weight: bold;
-        }
+.card:hover{
+    transform:translateY(-7px);
+}
 
-        footer {
-            background: #111827;
-            color: white;
-            text-align: center;
-            padding: 25px;
-        }
+.card h3{
+    color:#4338ca;
+    margin-bottom:12px;
+}
 
-        @media (max-width: 600px) {
-            .hero h1 {
-                font-size: 38px;
-            }
+.card h2{
+    color:#312e81;
+    margin-bottom:12px;
+}
 
-            .hero h2 {
-                font-size: 20px;
-            }
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:20px;
+}
 
-            nav a {
-                margin: 0 5px;
-                font-size: 13px;
-            }
+.skill-box{
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 7px 20px rgba(0,0,0,.07);
+}
 
-            section {
-                padding: 65px 6%;
-            }
-        }
-    </style>
+.skill-box h3{
+    color:#4338ca;
+    margin-bottom:10px;
+}
+
+.project{
+    margin-bottom:20px;
+}
+
+.project h3{
+    color:#312e81;
+}
+
+.timeline{
+    border-left:4px solid #6366f1;
+    padding-left:25px;
+}
+
+.timeline-item{
+    background:white;
+    padding:25px;
+    margin-bottom:20px;
+    border-radius:15px;
+    box-shadow:0 6px 20px rgba(0,0,0,.07);
+}
+
+.contact{
+    background:#eef2ff;
+    text-align:center;
+}
+
+.contact-box{
+    max-width:800px;
+    margin:auto;
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.contact-box p{
+    margin:12px 0;
+    font-size:18px;
+}
+
+.contact-box a{
+    color:#4338ca;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+footer{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+.badge{
+    display:inline-block;
+    background:#e0e7ff;
+    color:#3730a3;
+    padding:7px 14px;
+    border-radius:20px;
+    margin:5px;
+    font-size:14px;
+    font-weight:bold;
+}
+
+@media(max-width:700px){
+
+    nav{
+        gap:10px;
+        padding:12px 5px;
+    }
+
+    nav a{
+        font-size:12px;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .hero h2{
+        font-size:20px;
+    }
+
+    section{
+        padding:70px 5%;
+    }
+
+    .section-title{
+        font-size:30px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <!-- Navigation -->
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#education">Education</a>
-        <a href="#skills">Skills</a>
+<!-- NAVIGATION -->
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+
+<!-- HOME -->
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+    <h1>Hello, I'm <span>Vaishnavi R</span></h1>
+
+    <h2>B.Tech Information Technology Student</h2>
+
+    <p>
+        Information Technology student passionate about Software Development,
+        Web Development, Artificial Intelligence and LLM-based applications.
+    </p>
+
+    <div class="buttons">
+        <a href="#about" class="btn">Explore My Profile</a>
+
+        <a href="#contact" class="btn">Contact Me</a>
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section id="about">
+
+<div class="container">
+
+<h2 class="section-title">About Me</h2>
+
+<div class="about-box">
+
+<p>
+I am <strong>Vaishnavi R</strong>, a B.Tech Information Technology student
+at <strong>Vivekanandha College of Technology for Women</strong>.
+</p>
+
+<br>
+
+<p>
+I have experience and interest in software development, web development,
+Artificial Intelligence and LLM projects. I am proficient in Python, Java,
+JavaScript, HTML, CSS and MySQL.
+</p>
+
+<br>
+
+<p>
+I have strong problem-solving skills and a passion for learning and
+developing impactful technology solutions. I am seeking an entry-level
+opportunity where I can apply my technical skills, enhance my knowledge
+and contribute to the organization's success.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- EDUCATION -->
+<section id="education">
+
+<div class="container">
+
+<h2 class="section-title">Education</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h2>B.Tech Information Technology</h2>
+
+<h3>Vivekanandha College of Technology for Women</h3>
+
+<p><strong>2023 - 2027</strong></p>
+
+<p>CGPA: <strong>7.89</strong></p>
+
+</div>
+
+
+<div class="card">
+
+<h2>Higher Secondary Certificate</h2>
+
+<h3>Little Angels Higher Secondary School, Namakkal</h3>
+
+<p><strong>2023</strong></p>
+
+<p>Percentage: <strong>80%</strong></p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SKILLS -->
+<section id="skills">
+
+<div class="container">
+
+<h2 class="section-title">Technical Skills</h2>
+
+<div class="skills-grid">
+
+<div class="skill-box">
+
+<h3>Programming Languages</h3>
+
+<span class="badge">Python</span>
+<span class="badge">Java</span>
+<span class="badge">C</span>
+<span class="badge">JavaScript</span>
+
+</div>
+
+
+<div class="skill-box">
+
+<h3>Frontend</h3>
+
+<span class="badge">HTML</span>
+<span class="badge">CSS</span>
+<span class="badge">JavaScript</span>
+
+</div>
+
+
+<div class="skill-box">
+
+<h3>Backend</h3>
+
+<span class="badge">API Integration</span>
+<span class="badge">PHP</span>
+
+</div>
+
+
+<div class="skill-box">
+
+<h3>Database</h3>
+
+<span class="badge">MySQL</span>
+
+</div>
+
+
+<div class="skill-box">
+
+<h3>AI / Data Science</h3>
+
+<span class="badge">Artificial Intelligence</span>
+<span class="badge">Data Science</span>
+<span class="badge">LLM</span>
+<span class="badge">RAG</span>
+
+</div>
+
+
+<div class="skill-box">
+
+<h3>Tools</h3>
+
+<span class="badge">Git</span>
+<span class="badge">GitHub</span>
+<span class="badge">VS Code</span>
+<span class="badge">Figma</span>
+<span class="badge">Arduino IDE</span>
+<span class="badge">MS Office</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PROJECTS -->
+<section id="projects">
+
+<div class="container">
+
+<h2 class="section-title">Projects</h2>
+
+
+<div class="card project">
+
+<h2>Online Student Registration System</h2>
+
+<p>
+Designed and developed a web-based student registration portal with
+authentication, document upload, dashboard and MySQL database integration.
+</p>
+
+<br>
+
+<p>
+<strong>Technologies:</strong>
+HTML, CSS, JavaScript, PHP, MySQL
+</p>
+
+</div>
+
+
+<div class="card project">
+
+<h2>HR Policy Assistant using RAG and Generative AI</h2>
+
+<p>
+Built an AI-powered HR Policy Assistant using Retrieval-Augmented
+Generation (RAG) and Large Language Models.
+</p>
+
+<br>
+
+<p>
+The system retrieves relevant information from HR documents including
+leave, attendance, payroll, benefits and work-from-home policies.
+</p>
+
+<br>
+
+<p>
+It generates accurate and context-aware responses while helping reduce
+AI hallucinations.
+</p>
+
+<br>
+
+<p>
+<strong>Technologies:</strong>
+RAG, LLM, Python, Vector Database
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- EXPERIENCE -->
+<section id="experience">
+
+<div class="container">
+
+<h2 class="section-title">Internship Experience</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<h2>Web Development Internship</h2>
+
+<p>
+Implemented an Online Student Registration Website using HTML, CSS,
+JavaScript, PHP and MySQL.
+</p>
+
+<br>
+
+<p>
+Improved problem-solving abilities through structured coding exercises
+and practical web development.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- HACKATHONS -->
+<section id="achievements">
+
+<div class="container">
+
+<h2 class="section-title">Hackathons & Achievements</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>Smart India Hackathon 2024</h3>
+
+<p>
+Worked on an idea for online monitoring of unauthorised construction
+across the city.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>Smart India Hackathon 2025</h3>
+
+<p>
+Worked on an AI-Arduino based sea water waste collection solution.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>Achievements</h3>
+
+<p>
+Participated in Smart India Hackathon 2024 and 2025.
+</p>
+
+<br>
+
+<p>
+Developed projects involving AI, Java and Full-Stack Web Development.
+</p>
+
+<br>
+
+<p>
+Strong interest in emerging technologies and software engineering.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+
+<div class="container">
+
+<h2 class="section-title">Certifications & Workshops</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h2>Certifications</h2>
+
+<p>• Java Programming</p>
+
+<p>• Web Development</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>Workshops</h2>
+
+<p>• CSBS - Startup Autopsy</p>
+
+<p>• Python for AI & ML</p>
+
+<p>• Blockchain Workshop</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- LANGUAGES -->
+<section>
+
+<div class="container">
+
+<h2 class="section-title">Languages</h2>
+
+<div class="about-box">
+
+<span class="badge">Tamil</span>
+<span class="badge">English</span>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+<div class="container">
+
+<h2 class="section-title">Let's Connect</h2>
+
+<div class="contact-box">
+
+<p>
+📍 <strong>Location:</strong><br>
+Namakkal, Tamil Nadu, India
+</p>
+
+<p>
+📞 <strong>Phone:</strong><br>
+<a href="tel:+916382490108">+91 6382490108</a>
+</p>
+
+<p>
+📧 <strong>Email:</strong><br>
+<a href="mailto:vaishnavirajkumar1724@gmail.com">
+vaishnavirajkumar1724@gmail.com
+</a>
+</p>
+
+<br>
+
+<p>
+I am open to entry-level opportunities, internships and
+technology-related collaborations.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+<p>
+© 2026 Vaishnavi R | B.Tech Information Technology
+</p>
+
+</footer>
+
+</body>
+</html>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
     </nav>
